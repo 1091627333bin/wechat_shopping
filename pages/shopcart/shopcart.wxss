@@ -1,0 +1,26 @@
+/* pages/shopcart/shopcart.wxss */
+
+.cellfooter text{
+  width: 60rpx;
+  display: inline-block;
+  background-color: gainsboro;
+  text-align: center;
+}
+.content{
+  display: flex;
+}
+.content image{
+  width: 170rpx;
+  height: 170rpx;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+}
+.footer button{
+  margin-right: 40px;
+}

@@ -1,0 +1,39 @@
+/* pages/category/category.wxss */
+.box{
+  display: flex;
+}
+.leftbox{
+  width: 220rpx;
+}
+.rightbox{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.showbox{
+  margin: 5px;
+  width: 100px;
+  height: 150px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  
+}
+.showbox image{
+  width: 100%;
+  text-align: center;
+  line-height: 100%;
+}
+.left{
+  font-size: 15px;
+  height: 100rpx;
+  width: 200rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background-color: rgb(128, 128, 128,0.2);
+}
+.active{
+  color: red;
+  background-color: white;
+  border-left: 2px red solid;
+}

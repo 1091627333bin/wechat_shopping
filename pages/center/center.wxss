@@ -1,0 +1,10 @@
+/* pages/center/center.wxss */
+.userInfo{
+  background-color: #14c145;
+  text-align: center;
+}
+.userInfo image{
+  border-radius: 100rpx;
+  width: 200rpx;
+  height: 200rpx;
+}

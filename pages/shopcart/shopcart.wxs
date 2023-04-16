@@ -1,0 +1,19 @@
+function handleSum(list){
+  sum = 0
+  list.forEach(function(element){
+    if(element.checked){
+      sum += element.number * element.good.price
+    }
+  });
+  return sum
+}
+function handleallcheck(list){
+  if(list.length===0) return false
+  return list.every(function(item){
+    return item.checked===true
+  })
+}
+module.exports = {
+  handleSum:handleSum,
+  handleallcheck:handleallcheck
+}

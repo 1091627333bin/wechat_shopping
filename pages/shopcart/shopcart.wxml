@@ -1,0 +1,32 @@
+<!--pages/shopcart/shopcart.wxml-->
+<wxs src='./shopcart.wxs' module="calObj"></wxs>
+<mp-cells title="配送至广州" footer="左滑可以删除" wx:if="{{cartslist.length>0}}">
+  <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" wx:for="{{cartslist}}" wx:key="index" data-id="{{item.id}}">
+    <mp-cell>
+      <view class="content">
+        <checkbox checked="{{item.checked}}" bindtap="handleCheck" data-item="{{item}}"></checkbox>
+        <image src="http://localhost:5000{{item.good.poster}}" mode="widthFix"></image>
+        <view>
+          <view>{{item.good.title}}</view>
+          <view style="color: red;">￥{{item.good.price}}</view>
+        </view>
+      </view>
+
+      <view slot="footer" class="cellfooter">
+        <text bindtap="handlereduce" data-item="{{item}}">-</text>
+        <text>{{item.number}}</text>
+        <text bindtap="handleadd" data-item="{{item}}">+</text>
+      </view>
+    </mp-cell>
+  </mp-slideview>
+</mp-cells>
+<view wx:else style="text-align: center;">购物车空空如也</view>
+
+<view class="footer">
+  <checkbox-group bindchange="handleAllCheck">
+    <checkbox checked="{{calObj.handleallcheck(cartslist)}}"></checkbox>
+  </checkbox-group>
+  <view style="margin-right: 30px;">全选</view>
+  <view>合计：{{calObj.handleSum(cartslist)}}</view>
+  <button type="primary" size="mini">去结算</button>
+</view>

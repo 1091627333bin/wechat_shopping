@@ -1,0 +1,16 @@
+<!--pages/category/category.wxml-->
+<view class="box">
+  <view class="leftbox">
+      <view wx:for="{{vtabs}}" wx:key="index" class="left {{item.id===currentid?'active':''}}" bindtap="handleTabs" data-id="{{item.id}}">{{item.title}}</view>
+  </view>
+
+  <view class="rightbox">
+      <view wx:for="{{vtabs[currentid-1].goods}}" wx:key="index" class="showbox"
+      bindtap="handleChangePage" data-id="{{item.id}}" data-name="{{item.title}}">
+          <image src="http://localhost:5000{{item.poster}}" mode="widthFix"></image>
+          <view>{{item.title}}</view>
+      </view>
+  
+  </view>
+
+</view>
